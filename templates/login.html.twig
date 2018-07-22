@@ -1,0 +1,42 @@
+<link rel="stylesheet" type="text/css" href="css/login.css">
+<link rel="stylesheet" type="text/css" href="css/animate.css">
+<link href="vendor/fonts/css/opensans.css" rel="stylesheet">
+<link rel="stylesheet" href="vendor/fontawesome/css/all.css">
+<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.css">
+
+<div>
+    <div class="form center animated bounceInDown">
+        <div class="login-text">
+            <p class="login-header"> Anmeldung</p>
+            <i class="fas fa-lock"></i>
+            <p style="display:inline; font-weight: lighter">Secured Area</p>
+        </div>
+        <form action="{{ path('login') }}" method="post">
+            <div class="form_content input-group mb-3">
+                <input class="form-control" type="text" id="username" name="_username" placeholder=" Benutzername"
+                       value="{{ last_username }}"/>
+                <div class="input-group-append" style="margin-right:20px;">
+                    <span class="input-group-text"><i class="fa fa-user"></i></span>
+                </div>
+            </div>
+
+            <div class="form_content input-group mb-3">
+                <input class="form-control" type="password" id="password" name="_password" placeholder=" Kennwort"
+                       value="{{ last_username }}"/>
+                <div class="input-group-append" style="margin-right:20px;">
+                    <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                </div>
+            </div>
+
+            <button class="btn btn-primary button" type="submit"><i class="fas fa-sign-in-alt"></i> Anmelden</button>
+        </form>
+
+        {% if error %}
+            <div class="error">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+        {% endif %}
+        <p class="copyright">ECOR - &copy; Oliver Enes</p>
+    </div>
+</div>
+
+<script src="vendor/bootstrap/js/bootstrap.js"></script>
+<script></script>

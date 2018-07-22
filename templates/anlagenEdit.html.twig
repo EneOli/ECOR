@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Anlagenbearbeitung</title>
+    <link rel="stylesheet" href="css/anlagenEdit.css">
+</head>
+<body>
+
+<div id="formContent" class="content">
+    <form id="form">
+
+        <label for="craneId">Rekers Krannummer: </label> <input type="number" id="craneId" name="craneId"
+                                                                value="{{ data and data.craneId ? data.craneId : "" }}">
+        <br>
+        <label for="type">Krantyp: </label> <input type="text" id="type" name="type"
+                                                           value="{{ data and data.type and data.type != "null" ? data.type : "" }}">
+        <br>
+        <label for="manufactor"> Hersteller: </label> <input type="text" id="manufactor" name="manufactor"
+                                                             value="{{ data and data.manufactor and data.manufactor != "null"? data.manufactor : "" }}">
+        <br>
+        <label for="craneDesignation">Kranbezeichnung: </label> <input type="text" id="craneDesignation" name="craneDesignation" value="{{ data and data.craneDesignation and data.craneDesignation != "null"? data.craneDesignation : "" }}"> <br>
+
+
+        <label for="manufactorCraneNumber">Krannummer - Hersteller: </label> <input id="manufactorCraneNumber"
+                                                                                    name="manufactorCraneNumber"
+                                                                                    type="text"
+                                                                                    value="{{ data and data.manufactorCraneNumber and data.manufactorCraneNumber != "null" ? data.manufactorCraneNumber : "" }}">
+        <br>
+        <label for="liftingGearFactoryNumber">Fabriknummer des Hauptwerks: </label> <input type="text"
+                                                                                           id="liftingGearFactoryNumber"
+                                                                                           name="liftingGearFactoryNumber"
+                                                                                           value="{{ data and data.liftingGearFactoryNumber and data.liftingGearFactoryNumber != "null" ? data.liftingGearFactoryNumber : "" }}">
+        <br>
+        <label for="liftingGearDesignation">Hubwerksbezeichnung: </label> <input type="text" id="liftingGearDesignation"
+                                                                                 name="liftingGearDesignation"  value="{{ data and data.liftingGearDesignation and data.liftingGearDesignation != "null" ? data.liftingGearDesignation : "" }}"> <br>
+        <label for="engineGroup">Triebwerksgruppe: </label> <input type="text" id="engineGroup" name="engineGroup"
+                                                                   value="{{ data and data.engineGroup and data.engineGroup != "null" ? data.engineGroup : "" }}">
+        <br>
+        <label for="ropeModel">Ausführung Seil: </label> <input type="number" id="ropeModel" name="ropeModel"
+                                                                value="{{ data and (data.ropeModel or data.ropeModel == 0) ? data.ropeModel : "" }}">
+        <br>
+        <label for="ropeDiameter">Seilnenndurchmesser: </label> <input type="number" id="ropeDiameter"
+                                                                       name="ropeDiameter"
+                                                                       value="{{ data and data.ropeDiameter ? data.ropeDiameter and data.ropeDiameter != "null" : "" }}">
+        mm<br>
+        <label for="ropeLength">Seillänge: </label> <input type="number" id="ropeLength" name="ropeLength"
+                                                           value="{{ data and data.ropeLength ? data.ropeLength and data.ropeLength != "null" : "" }}">
+        m <br>
+        <label for="control">Steuerung: </label> <input type="text" id="control" name="control"
+                                                        value="{{ data and data.control and data.control != "null" ? data.control : "" }}">
+        <br>
+        <label for="loadCapacityCat">Tragfähigkeit der Katze: </label> <input id="loadCapacityCat"
+                                                                              name="loadCapacityCat" type="number"
+                                                                              value="{{ data and data.loadCapacityCat and data.loadCapacityCat != "null" ? data.loadCapacityCat : "" }}">
+        t<br>
+        <label for="loadCapacityBridge">Tragfähigkeit der Brücke: </label> <input type="number" id="loadCapacityBridge"
+                                                                                  name="loadCapacityBridge"
+                                                                                  value="{{ data and data.loadCapacityBridge and data.loadCapacityBridge != "null" ? data.loadCapacityBridge : "" }}">
+        t<br>
+        <label for="totalWeight">Gesamtgewicht inkl. Katze: </label> <input type="number" id="totalWeight"
+                                                                            name="totalWeight"
+                                                                            value="{{ data and data.totalWeight and data.totalWeight != "null" ? data.totalWeight : "" }}">
+        t<br>
+        <label for="span">Spannweite: </label> <input type="number" id="span" name="span" value="{{ data and data.span ? data.span : "" }}"> m<br>
+        <label for="impellerDiameterCat">Laufraddurchmesser des Katzfahrwerks: </label> <input type="number"
+                                                                                               id="impellerDiameterCat"
+                                                                                               name="impellerDiameterCat"
+                                                                                               value="{{ data and data.impellerDiameterCat and data.impellerDiameterCat != "null" ? data.impellerDiameterCat : "" }}">
+        cm<br>
+        <label for="impellerDiameterCrane">Laufraddurchmesser des Kranfahrwerks: </label> <input type="number"
+                                                                                                 id="impellerDiameterCrane"
+                                                                                                 name="impellerDiameterCrane"
+                                                                                                 value="{{ data and data.impellerDiameterCrane and data.impellerDiameterCrane != "null" ? data.impellerDiameterCrane : "" }}">
+        cm<br>
+        <label for="location">Standort: </label> <input type="text" id="location" name="location"
+                                                        value="{{ data and data.location and data.location != "null" ? data.location : "" }}"><br>
+        <label for="hallNumber">Hallennummer: </label> <input type="number" id="hallNumber" name="hallNumber"
+                                                              value="{{ data and data.hallNumber and data.hallNumber != "null" ? data.hallNumber : "" }}"><br>
+        <label for="FieldOfActivity">Tätigkeitsbereich: </label> <input type="text" id="FieldOfActivity"
+                                                                        name="FieldOfActivity"
+                                                                        value="{{ data and data.FieldOfActivity and data.FieldOfActivity != "null" ? data.FieldOfActivity : "" }}"><br>
+        <label for="construtionYear">Baujahr: </label> <input type="number" id="construtionYear" name="construtionYear"
+                                                              value="{{ data and data.construtionYear and data.construtionYear != "null" ? data.construtionYear : "" }}"><br>
+        <label for="overhaul">Generalüberholung: </label> <input type="text" id="overhaul" name="overhaul"
+                                                                 value="{{ data and data.overhaul and data.overhaul != "null" ? data.overhaul : "" }}"><br>
+        <label for="proportionOfOverhaul">Anteil der Generalüberholung: </label> <input type="text"
+                                                                                        id="proportionOfOverhaul"
+                                                                                        name="proportionOfOverhaul"
+                                                                                        value="{{ data and data.proportionOfOverhaul and data.proportionOfOverhaul != "null" ? data.proportionOfOverhaul : "" }}"><br>
+        <label for="files">Zusätzliche Dateien: </label><input onchange="fileHandler(event)" id="files" type="file"
+                                                               multiple>
+
+        {% if data and data.files and data|length > 0 %}
+            <div id="uploadedFiles">
+                {% set files = data.files|split(',') %}
+                <h3>Verfügbare Dateien</h3>
+                <ul id="uploadedFilesList">
+                    {% for file in files %}
+                        {% set fileParts = file|split('/') %}
+                        <li><a target="_blank" rel="noopener noreferrer"
+                               href="{{ file }}">{{ fileParts[fileParts|length-1] }}</a> <i
+                                    onclick='deleteFile({{ data.id }}, "{{ fileParts[fileParts|length-1] }}", event)'
+                                    class="fas fa-trash pushButton"></i>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+
+        <div>
+            <p id="loadingStatus" style="color:red"></p>
+        </div>
+
+
+        <label for="remarks">Zusätzliche Anmerkungen: </label> <br> <textarea class="remarks" type="textarea"
+                                                                              id="remarks"
+                                                                              name="remarks">{{ data and data.remarks and data.remarks != "null" ? data.remarks : "" }}</textarea><br>
+    </form>
+</div>
+<hr>
+
+<div class="button-wrapper">
+    <div class="button-inner-wrapper">
+        <button id="submitButton" class="btn btn-primary pushButton" onclick="save()">
+            <i class="fas fa-hdd"></i> Speichern
+        </button>
+    </div>
+
+    <div class="button-inner-wrapper">
+        <button class="btn btn-danger pushButton"
+                onclick="closeWindow()"><i class="fas fa-times"></i> Abbrechen
+        </button>
+
+        <div class="button-inner-wrapper">
+            <button class="btn btn-success pushButton"
+                    onclick="printForm()"><i class="fas fa-print"></i> Drucken
+            </button>
+        </div>
+    </div>
+</div>
+<script>
+
+    window.tmpFiles = [];
+
+    function save()
+    {
+        let result = genJson();
+
+        {% if data and data.id and data.id != "" and data.id != "null" %}
+        parent.updateAnlageDB({{ data.id }}, result);
+        {% else %}
+        parent.saveAnlageDB(result);
+        {% endif %}
+    }
+
+</script>
+</body>
+</html>

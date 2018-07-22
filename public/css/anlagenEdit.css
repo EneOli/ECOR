@@ -1,0 +1,34 @@
+@import url('/vendor/fonts/css/opensans.css');
+
+.content {
+    height: 85%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.button-wrapper {
+    width: 100%;
+    text-align: center;
+}
+
+.button-inner-wrapper {
+    display: inline-block;
+}
+
+.pushButton  {
+    cursor: pointer;
+}
+
+input[type=text], input[type=number] {
+    font-family: 'Open Sans', sans-serif;
+    outline: transparent;
+    border-radius: 4px;
+    border: 1px solid grey;
+    padding-left: 5px;
+}
+
+.remarks {
+    width: 99%;
+    height: 200px;
+    resize: none;
+}

@@ -1,0 +1,67 @@
+body {
+    background: url("../imgs/mybg.png");
+}
+
+.form {
+    border: 0.25px solid lightgrey;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background: white;
+}
+
+.copyright {
+    float: bottom;
+    margin-top: 80px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 10px;
+
+}
+
+.login-text {
+    font-family: 'Open Sans', sans-serif;
+    color: gray;
+    margin-left: 180px;
+    //margin: 10px;
+    margin-bottom: 0px;
+}
+
+.login-header {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: gray;
+    margin-top: 10px;
+    margin-bottom: 2px;
+}
+
+.form_content {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 25px;
+    font-family: 'Open Sans', sans-serif;
+    width: 95%;
+    height: 30px;
+
+}
+
+.button {
+    float: right;
+    margin-top: 4px;
+    margin-right: 20px;
+}
+
+.error {
+    color: red;
+    font-family: 'Open Sans', sans-serif;
+    margin: 10px;
+}
+
+.center {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 500px;
+    height: 250px;
+}
