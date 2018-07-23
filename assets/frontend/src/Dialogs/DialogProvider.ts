@@ -5,9 +5,7 @@ export class DialogProvider
 {
     private static dhxWins: any;
 
-    static baseUrl = "http://ecor.enesnet.de";
-    //static baseUrl = "http://127.0.0.1:8000";
-    //static baseUrl = window.location.origin;
+    static baseUrl = window.location.origin;
 
     private static createWindow()
     {

@@ -2,9 +2,7 @@ import axios from "axios";
 
 export class AnlagenService
 {
-    static baseUrl = "http://ecor.enesnet.de";
-    //static baseUrl = "http://127.0.0.1:8000";
-    //static baseUrl = window.location.origin;
+    static baseUrl = window.location.origin;
 
     public static getAnlagen(): any
     {
